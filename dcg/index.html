@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .content {
+            width: 50%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            outline: none;
+            color: white;
+        }
+
+        .launch {
+            background-color: #4CAF50;
+        }
+
+        .demo {
+            background-color: #333;
+        }
+
+        .video {
+            width: 45%;
+            text-align: right;
+        }
+
+        .video video {
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="navbar">
+                <div><img src="your_logo_url_here" alt="Logo"></div>
+                <div>
+                    <a href="#">Solutions</a>
+                    <a href="#">Developers</a>
+                    <a href="#">Ecosystem</a>
+                    <a href="#">Blog</a>
+                    <a href="#">About</a>
+                </div>
+            </div>
+            <h1>Stream money every second.</h1>
+            <p>Your description here. Replace with relevant content.</p>
+            <div class="buttons">
+                <button class="button launch">Launch App</button>
+                <button class="button demo">Book Demo</button>
+            </div>
+        </div>
+        <div class="video">
+            <video autoplay loop muted>
+                <source src="https://www.superfluid.finance/video/home/hero/1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</body>
+</html>

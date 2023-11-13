@@ -1,0 +1,305 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Tahoma', Helvetica, sans-serif;
+  background-color: #fff;
+  color: #ec1f27;
+}
+
+/* Navigation bar styles */
+.navbar {
+  background-color: #f6f6ef;
+  padding: 1.5rem 1rem;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.navbar .navbar-links {
+  display: flex; /* Align navbar links horizontally */
+}
+
+.navbar .nav-item {
+  position: relative; /* Container for the submenu */
+}
+
+.navbar a {
+  color: #154245;
+  text-decoration: none;
+  padding: .1rem 1.5rem;
+  font-weight: normal;
+}
+
+.navbar .nav-item a:hover {
+  color: #49e4ef;
+}
+
+    /* Styles for the dropdown menus */
+.navbar .nav-item .submenu {
+  display: none; /* Hide the submenu by default */
+  position: absolute; /* Position submenu in relation to nav-item */
+  background-color: #fff; /* Submenu background */
+  border-radius: 12px;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2); /* Optional: add some shadow */
+  z-index: 1000; /* Ensure the submenu appears above other content */
+}
+
+    /* Show the submenu on hover */
+.navbar .nav-item:hover .submenu {
+  display: block; /* Display submenu on hover */
+  padding: 5%;
+  border-radius: 12px;
+  min-width: 150px; /* Set minimum width for the submenu */
+}
+
+   /* Style submenu items */
+.navbar .nav-item .submenu a {
+  color: #154245;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block; /* Submenu items should stack vertically */
+}
+
+/* Change submenu item background on hover */
+.navbar .nav-item .submenu a:hover {
+  color: #154245;
+  background-color: #ddd; /* Light grey background on hover */
+}
+
+.navbar .logo-image {
+  margin-left: 13rem;
+  height: 40px; /* Adjust the height as needed */
+  width: auto;
+}
+
+/* Body section styles */
+.body-section {
+  display: flex;
+  padding: 0;
+}
+
+.text-block {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center the content vertically */
+  margin-right: 9rem; /* Adjust the right margin as needed */
+  background-color: #fff;
+}
+
+.text-block .section-title {
+  font-family: 'Tahoma', Helvetica, sans-serif;
+  font-size: 4rem; /* Example size, adjust as needed */
+  color: #154245; /* Example color, adjust as needed */
+  text-align: left;
+  line-height: 1; /* Adjust this value as needed */
+  margin-left: 13rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem; /* Spacing between the title and the headline */
+  font-weight: bold; /* Optional: if you want the title to be bold */
+}
+
+.text-block .section-title .highlight {
+  color: #de8a27; /* The new color for the single word */
+  font-weight: bold; /* Optional: if you want the word to be bold */
+}
+
+.text-block .subheadline {
+  font-family: 'Tahoma', sans-serif;
+  font-size: 1.4rem; 
+  color: #666; 
+  line-height: 1.6; 
+  text-align: left; 
+  margin-left: 13rem;
+  margin-bottom: 0rem; 
+  font-style: normal; 
+} 
+
+/* .text-block .headline {
+  font-family: 'Tahoma', Helvetica, sans-serif;
+  font-size: 2rem; 
+  color: #ec1f27; 
+  text-align: left; 
+  margin-bottom: 0rem; 
+  display: flex; 
+  align-items: center; 
+  font-weight: normal; 
+} */
+
+/* If you have a .cta-button inside .text-block and want to customize it as well */
+.text-block .cta-button {
+  background-color: #f4797d; /* Custom button color */
+  color: #fff; /* Text color for the button */
+  padding: .5rem .5rem; /* Padding inside the button */
+  padding-top: .65rem;
+  text-decoration: none; /* Remove underline from the text */
+  border-radius: 8px; /* Rounded corners for the button */
+  display: inline-block; /* Allows setting padding and margins */
+  margin-top: 1rem; /* Space above the button */
+  width: 22%; /* Adjust the width to your preference */
+  margin-left: 13rem; /* Add space between the headline text and the button */
+  font-size: 1.2rem;
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center text */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.text-block .cta-button:hover {
+  background-color: #ec1f27; /* Different color when hovered over */
+}
+
+/* Container for the image and stat cards */
+.image-stats-container {
+  position: relative; /* This allows absolute positioning relative to this container */
+  flex: 1; /* Ensures it takes up the appropriate space in the flex container */
+  
+}
+
+.image-block {
+  flex: 1;
+}
+
+.image-block img {
+  max-width: 700px; /* Fixed width */
+  height: auto; /* Height is auto to maintain aspect ratio */
+}
+
+/* Statistic cards overlay */
+.stats-overlay {
+  position: absolute;
+  top: 70px; /* Adjust this value to position the stat cards as desired */
+  right: 580px; /* Adjust this value to position the stat cards as desired */
+  /* Removed the transform property since we're positioning from the top right corner */
+}
+
+.stats-card {
+  background-color: #f6f6ef;
+  padding: 1.2rem; /* Reduced padding to make cards shorter */
+  margin: 2rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: 200px; /* Fixed width */
+  text-align: center;
+  border-radius: 24px;
+}
+
+.stats-card h3 {
+  font-size: 2rem;
+  color: #de8a27; /* Dark orange color */
+  font-weight: bold; /* Make the text bold */
+  margin-top: 0.75rem; /* Reduce top margin to bring text closer to top of card*/
+  margin-bottom: 0.5rem; /* Reduce bottom margin to bring closer to the paragraph */
+}
+
+.stats-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.75rem; /* Reduce top margin to bring closer to the heading */
+}
+
+/* Cards Section styles */
+.cards-section {
+  display: flex;
+  justify-content: space-around; /* This will space the cards evenly */
+  background-color: #f6f6ef; /* Grey background */
+  padding: 2rem 0; /* Padding above and below the cards */
+}
+
+/* Use a pseudo-element to handle the horizontal padding */
+.cards-section::before,
+.cards-section::after {
+  content: "";
+  flex: 1;
+}
+
+.card {
+  background-color: #fff; /* White background for cards */
+  padding: 0.5rem; /* Padding inside each card */
+  width: 15%; /* Width for each card */
+  margin: 1rem 1rem; /* Margin around cards */
+  margin-top: 1rem;
+  border-radius: 12px; /* Rounded corners for cards */
+  text-align: center; /* Center text within cards */
+  flex: 0.25 0 auto;
+}
+
+.card h3 {
+  /* font-family: 'Georgia', serif; /* Change to Georgia */
+  font-size: 1rem; /* Adjust size as needed */
+  color: #2f939a; /* Keep existing color or change as needed */
+  text-align: left;
+  font-weight: bold; /* Keep headings bold */
+  margin-bottom: 0.5rem; /* Adjust spacing as needed */
+}
+
+.card p {
+  /* font-family: 'Arial', sans-serif; /* Change to Arial */
+  font-size: 1rem; /* Adjust size as needed */
+  color: #666; /* Keep existing color or change as needed */
+  margin-top: 0.5rem; /* Adjust spacing as needed */
+  text-align: left;
+  line-height: 1.4; /* Adjust line height for readability */
+}
+
+.card .card-link {
+  display: block; /* Make the link fill the card */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* The link text uses the current color */
+  height: 100%; /* Ensure the link fills the entire card */
+  padding: 1rem; /* If you want padding inside the card */
+  border-radius: 24px; /* Match the card's border radius */
+}
+
+.card:hover, .card .card-link:hover {
+  background-color: #eff6f0; /* Change to desired hover background color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f6f6ef;
+  color: #154245;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .header,
+  .navbar {
+    flex-direction: column;
+  }
+
+  .body-section {
+    flex-direction: column;
+  }
+
+  .stats-overlay {
+    top: initial;
+    bottom: 10px; /* Position at the bottom of the image container on small screens */
+    right: 10px; /* Adjust as needed for small screens */
+  }
+
+  .stats-card {
+    width: 150px;
+  }
+  
+  .image-block img {
+    width: 100%; /* Full width on small screens */
+    max-width: 500px; /* Max-width to ensure it doesn't get too big */
+  } 
+    
+  .image-stats-container {
+    flex-direction: column; /* Stack image and stats on small screens */
+  }
+  
+  .cards-section {
+    flex-direction: column; /* Stack cards vertically on smaller screens */
+    align-items: center; /* Align cards in the center */
+  }
+
+  .card {
+    width: 80%; /* Wider cards for small screens */
+    margin-bottom: 1rem; /* Space between stacked cards */
+  }
+}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Denver Crypto Services</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="v2_styles.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
       <div class="bar"></div>
     </div>
     <div class="navbar-logo">
-      <a href="index.html"><img src="dcg_logo2.png" alt="DCG Logo" class="logo-image"></a> <!-- Logo image -->
+      <a href="v2_index.html"><img src="dcg_logo2.png" alt="DCG Logo" class="logo-image"></a> <!-- Logo image -->
     </div>
     <div class="navbar-links">
       <div class="nav-item">
@@ -25,21 +25,16 @@
       <div class="nav-item">  
         <a href="v2_index_services.html" onclick="toggleSubmenu('services-submenu');">Services</a>
         <div class="submenu" id="services-submenu">
-          <a href="v2_index_services.html#homebase">Training</a>
-          <a href="v2_index_services.html#expert">Advising</a>
-          <a href="v2_index_services.html#speaker">Speaking</a>
+          <a href="v2_index_homebase.html">Training</a>
+          <a href="v2_index_portemp.html">Advising</a>
+          <a href="v2_index_portemp.html">Speaking</a>
         </div>
       </div>
       <div class="nav-item">
-        <a href="v2_index_resources.html" onclick="toggleSubmenu('resources-submenu');">Resources</a>
-        <div class="submenu" id="resources-submenu">
-          <a href="v2_index_resources.html#portfolio">Portfolio</a>
-          <a href="v2_index_resources.html#guide">Guide</a>
-          <a href="v2_index_resources.html#news">News</a>
-        </div>
+        <a href="v2_index_resources.html">Resources</a>
       </div>
       <div class="nav-item">
-        <!--a href="v2_index_events.html">Events</a-->
+        <a href="v2_index_events.html">Events</a>
       </div>  
         <a href="v2_index_members.html" class="apply-link">Member Login</a>
       </div>
@@ -47,47 +42,34 @@
   </nav>
 
   <!--1st Body Section -->
-  <section class="body-section">
-    <div class="text-block">
-      <h1 class="section-title">Denver<br><span class="highlight">Crypto Group</span></h1>
-      <p class="subheadline">Education and security based <br>crypto onboarding.</p>
- <!-- <p class="headline">Learn from the best</p> -->
-      <a href="https://calendly.com/matt_crypto/15-min-intro" class="cta-button">Start Here</a>
+  <section class="full-width-image-section">
+    <!--img src="dcgmeetup_3.jpeg" alt="denver crypto group class" class="full-width-image"-->  <!-- Image is now set as a background in the CSS -->
+    <div class="overlay-text-boxes">
+      <div class="text-box" id="text-box-1">
+        <p>Core Services</p>
+      </div>
+      <div class="text-box" id="text-box-2">
+        <p>Training, Advising & Speaking</p>
+      </div>
     </div>
-
-    <!-- New parent container for image and stat cards -->
-    <div class="image-stats-container">
-      <div class="image-block">
-        <img src="dcgmeetup_2.2.jpg" alt="Audience learning about blockchain">
-      </div>
-      <!-- Stat Cards Overlay -->
-      <div class="stats-overlay">
-        <div class="stats-card">
-          <h3>7+ years</h3>
-          <p>onboarding & educating</p>
-        </div>
-        <div class="stats-card">
-          <h3>2000+</h3>
-          <p>humans served</p>
-        </div>
-      </div>
   </section>
-    <!-- New Section with Cards -->
+  
+  <!-- New Section with Cards -->
   <section class="cards-section">
     <div class="card">
-      <a href="v2_index_services.html#homebase" class="card-link">
+      <a href="v2_index_homebase.html" class="card-link">
         <h3>The Home Base</h3>
         <p>Create an ultra secure foundation for your crypto journey based on cybersecurity best practices and many years of DCG experience.</p>
       </a>
     </div>
     <div class="card">
-      <a href="v2_index_resources.html#portfolio" class="card-link">
+      <a href="v2_index_homebase.html" class="card-link">
         <h3>Portfolio Manager</h3>
         <p>Control your investments with our sleek portfolio template. Includes self-updating prices, easy transaction logging and loan position tracking.</p>
       </a>
     </div>
     <div class="card">
-      <a href="v2_index_services.html#expert" class="card-link">
+      <a href="v2_index_homebase.html" class="card-link">
         <h3>Expert Advice</h3>
         <p>Leverage our knowledge and resources to accomplish your crypto goals.</p>
       </a>

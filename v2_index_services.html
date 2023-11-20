@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denver Crypto Services</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="navbar-logo">
+      <a href="index.html"><img src="dcg_logo2.png" alt="DCG Logo" class="logo-image"></a> <!-- Logo image -->
+    </div>
+    <div class="navbar-links">
+      <div class="nav-item">
+        <a href="v2_index_about.html">About</a>
+      </div>  
+      <div class="nav-item">  
+        <a href="v2_index_services.html" onclick="toggleSubmenu('services-submenu');">Services</a>
+        <div class="submenu" id="services-submenu">
+          <a href="v2_index_services.html#homebase">Training</a>
+          <a href="v2_index_services.html#expert">Advising</a>
+          <a href="v2_index_services.html#speaker">Speaking</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="v2_index_resources.html" onclick="toggleSubmenu('resources-submenu');">Resources</a>
+        <div class="submenu" id="resources-submenu">
+          <a href="v2_index_resources.html#portfolio">Portfolio</a>
+          <a href="v2_index_resources.html#guide">Guide</a>
+          <a href="v2_index_resources.html#news">News</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <!--a href="v2_index_events.html">Events</a-->
+      </div>  
+        <a href="v2_index_members.html" class="apply-link">Member Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <!--1st Body Section -->
+  <section class="full-width-image-section">
+    <img src="dcgmeetup_3.jpeg" alt="denver crypto blockchain class" class="full-width-image">
+    <div class="overlay-text-boxes">
+      <div class="text-box" id="text-box-1">
+        <p>Core Services</p>
+      </div>
+      <div class="text-box" id="text-box-2">
+        <p>Training, Advising & Speaking</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- New Section with Cards -->
+  <section class="cards-section">
+    <div class="card">
+      <a href="v2_index_services.html#homebase" class="card-link">
+        <h3>Training</h3>
+        <p>Learn from the best to get ahead of the rest!</p><p>Popular training: <br><b>Home Base, Defi, Mining, Trading, & Vetting</b></p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="v2_index_services.html#expert" class="card-link">
+        <h3>Advising</h3>
+        <p>Get expert advice for most facets of the crypto ecosystem. <br>Find success with creative strategies that cater to your crypto ambitions.</p>
+      </a>
+    </div>
+    <div class="card">
+      <a href="v2_index_services.html#speaker" class="card-link">
+        <h3>Speaking</h3>
+        <p>Inform your group about the opportunity, risks, and transformation driven by crypto, blockchain and web3. Custom presentations for specific use cases and industries on request.</p>
+      </a>
+    </div>
+  </section>
+  
+  <!-- New Section for Homebase -->
+  <!--div class="info-section-title">
+      <h1>Training</h1>
+  </div -->
+  <section class="info-section" id="homebase">
+    <div class="info-image">
+        <img src="dcg_homemoonbase.png" alt="dcg moon home base">
+    </div>
+    <div class="info-content">
+        <h2>Homebase</h2>
+        <p>Cybersecurity and self custody are two core values of the DCG. The Homebase package trains you to create a rock solid foundation for safely launching into any part of the crypto universe.</p>
+        <ul>
+        <li>Encrypted email</li>
+        <li>Password manager</li>
+        <li>2 Factor Authentication (2FA)</li>
+        <li>Exchange Account</li>
+        <li>Hardware Wallet</li>
+        <li>Crypto Transfers</li> 
+        </ul>
+        <div class="info-links">
+            <a href="https://calendly.com/matt_crypto/15-min-intro">Get Started</a>
+        </div>
+    </div>
+  </section>
+
+  <!--div class="info-section-title">
+      <h1>Advising</h1>
+  </div -->
+  <section class="info-section" id="expert">
+    <div class="info-image">
+        <img src="dcg_alienadvisor.png" alt="dcg advising alien">
+    </div>
+    <div class="info-content">
+        <h2>Expert Advice</h2>
+        <p>High quality and impartial advice is hard to come by in the crypto cosmos. To make your cryptocurrency aspirations reality, utilize years of DCG experience to travel beyond the stars.</p>
+        <ul>
+        <li>Sliding Scale, Hourly Rate</li>
+        <li>Project Consultations</li>
+        <li>Transaction Tracing</li>
+        <li>Wallet Recovery</li>
+        <li>Scam Protection</li>
+        <li><b><i>No Financial Advice</b></i></li> 
+        </ul>
+        <div class="info-links">
+            <a href="https://calendly.com/matt_crypto/15-min-intro">Discovery Call</a>
+        </div>
+    </div>
+  </section>
+  
+  <section class="info-section" id="speaker">
+    <div class="info-image">
+        <img src="dcg_anonspeaker.png" alt="dcg speaker alien">
+    </div>
+    <div class="info-content">
+        <h2 id="speaker">Public Presentations</h2>
+        <p>Effectively educate your audience about the world of crypto, blockchain and web3. With over 100 custom built presentations the DCG can simply explain these complex subjects while highlighting areas that give opportunity or otherwise impact your industry.</p>
+        <div class="info-links">
+            <a href="https://calendly.com/matt_crypto/15-min-intro">Book Here</a>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Copyright © 2023 Denver Crypto Group</p>
+  </footer>
+
+<script>
+function toggleMenu() {
+  var links = document.querySelector('.navbar .navbar-links');
+  if (links.style.display === 'flex') {
+    links.style.display = 'none';
+  } else {
+    links.style.display = 'flex';
+  }
+}
+
+// Function to toggle submenus
+function toggleSubmenu(submenuId) {
+  var submenu = document.getElementById(submenuId);
+  if (submenu.style.display === 'block') {
+    submenu.style.display = 'none';
+  } else {
+    submenu.style.display = 'block';
+  }
+  // Prevent the main menu from closing when a submenu is clicked
+  event.stopPropagation();
+}
+</script>
+
+</body>
+</html>
+

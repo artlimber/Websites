@@ -3,32 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Landing Page</title>
+  <title>Denver Crypto Services</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <div class="navbar-logo">
       <a href="index.html"><img src="dcg_logo2.png" alt="DCG Logo" class="logo-image"></a> <!-- Logo image -->
     </div>
     <div class="navbar-links">
       <div class="nav-item">
-        <a href="index_about.html">About</a>
+        <a href="v2_index_about.html">About</a>
       </div>  
       <div class="nav-item">  
-        <a href="index_services.html">Services</a>
+        <a href="v2_index_services.html" onclick="toggleSubmenu('services-submenu');">Services</a>
+        <div class="submenu" id="services-submenu">
+          <a href="v2_index_services.html#homebase">Training</a>
+          <a href="v2_index_services.html#expert">Advising</a>
+          <a href="v2_index_services.html#speaker">Speaking</a>
+        </div>
       </div>
       <div class="nav-item">
-        <a href="index_resources.html">Resources</a>
-        <div class="submenu">
-          <a href="index_homebase.html">Homebase</a>
-          <a href="index_portemp.html">Portfolio</a>
+        <a href="v2_index_resources.html" onclick="toggleSubmenu('resources-submenu');">Resources</a>
+        <div class="submenu" id="resources-submenu">
+          <a href="v2_index_resources.html#portfolio">Portfolio</a>
+          <a href="v2_index_resources.html#guide">Guide</a>
+          <a href="v2_index_resources.html#news">News</a>
         </div>
-        <!-- More submenu items -->
       </div>
-        <a href="index_members.html" class="apply-link">Member Login</a>
+      <div class="nav-item">
+        <!--a href="v2_index_events.html">Events</a-->
+      </div>  
+        <a href="v2_index_members.html" class="apply-link">Member Login</a>
       </div>
     </div>
   </nav>

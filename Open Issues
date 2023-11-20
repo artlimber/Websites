@@ -1,0 +1,9 @@
+Navbar
+	- When small size the hamburger menu doesn't display on top of content Services page only
+	- Menu stays at top always? Only for hamburger? Currently it is at top of each page.
+Services
+	- When small size the text overlaps for textbox 2
+	- Homebase image doesn't maintain aspect ratio
+	- Homebase column text disappears into the right margin on small size
+Home
+	- As viewing size shrinks stat cards overlap text box text. Once small size occurs problem goes away.

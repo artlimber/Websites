@@ -3,8 +3,9 @@ body {
   margin: 0;
   font-family: 'Tahoma', Helvetica, sans-serif;
   background-color: #fff;
-  color: #ec1f27;
+  color: #000;
 }
+
 
 /* Navigation bar styles */
 .navbar {
@@ -16,11 +17,21 @@ body {
 }
 
 .navbar .navbar-links {
+  position: relative;
   display: flex; /* Align navbar links horizontally */
 }
 
-.navbar .nav-item {
-  position: relative; /* Container for the submenu */
+.navbar .navbar-links .apply-link {
+  color: #DE8A27;
+}
+
+.navbar .navbar-links .apply-link:hover {
+  color: #ec1f27;
+}
+
+	/* Container for the submenu */
+.navbar .nav-item { 
+  position: relative; 
 }
 
 .navbar a {
@@ -34,25 +45,27 @@ body {
   color: #49e4ef;
 }
 
-    /* Styles for the dropdown menus */
+	/* Styles for the dropdown menus */
 .navbar .nav-item .submenu {
   display: none; /* Hide the submenu by default */
   position: absolute; /* Position submenu in relation to nav-item */
+  top: 100%;
+  left: 0;
   background-color: #fff; /* Submenu background */
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2); /* Optional: add some shadow */
   z-index: 1000; /* Ensure the submenu appears above other content */
 }
 
-    /* Show the submenu on hover */
+	/* Show the submenu on hover */
 .navbar .nav-item:hover .submenu {
   display: block; /* Display submenu on hover */
-  padding: 5%;
-  border-radius: 12px;
+  padding: 3%;
+  border-radius: 6px;
   min-width: 150px; /* Set minimum width for the submenu */
 }
 
-   /* Style submenu items */
+	/* Style submenu items */
 .navbar .nav-item .submenu a {
   color: #154245;
   padding: 12px 16px;
@@ -60,7 +73,7 @@ body {
   display: block; /* Submenu items should stack vertically */
 }
 
-/* Change submenu item background on hover */
+	/* Change submenu item background on hover */
 .navbar .nav-item .submenu a:hover {
   color: #154245;
   background-color: #ddd; /* Light grey background on hover */
@@ -72,10 +85,97 @@ body {
   width: auto;
 }
 
+	/* Hamburger Menu - visible on small screens */
+.hamburger-menu {
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  z-index: 2000;
+  margin-left: 33%;
+  height: 25px; /* Hamburger icon height */
+  width: 30px; /* Hamburger icon width */
+}
+
+.hamburger-menu .bar {
+  background-color: #333;
+  text-align: center;
+  height: 2px;
+  z-index: 2000;
+  width: 100%;
+}
+
+	/* Hide submenus by default */
+.submenu {
+  display: none;
+  /* other styles... */
+}
+
+	/* Style for when submenu is active (visible) */
+.submenu.active {
+  display: block;
+}
+
+
 /* Body section styles */
 .body-section {
   display: flex;
   padding: 0;
+}
+
+.executive-profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 50px;
+  background-color: #fff; /* Light grey background */
+}
+
+.profile-content {
+  max-width: 23%; /* Limit the width of the text block */
+  margin-left: 15%;
+  padding-right: 90px; /* Space between the text and the image */
+}
+
+.profile-content h1 {
+  font-size: 1.5em; /* Large text for the main title */
+  color: #154245;
+  margin-bottom: 0.2em;
+}
+
+.profile-content h2 {
+  font-size: 1.3em; /* Smaller text for the subtitle */
+  color: #e8ad68; /* Dark grey for the subtitle */
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 1.7em;
+}
+
+.profile-content p {
+  line-height: 1.4;
+  font-size: .9em;
+  color: #333; /* Darker text for better readability */
+  margin-bottom: 1em;
+}
+
+.profile-content p a {
+  color: #2f939a; /* Example color */
+  text-decoration: underline; /* Keeps the underline to indicate it's a link */
+  /* Additional styles as needed */
+}
+
+.profile-image {
+  flex: 1;
+  display: flex;
+  margin-top: 133px;
+  justify-content: left; /* Center image in the space */
+}
+
+.profile-image img {
+  border-radius: 2%; /* Gives a slight oval shape to the square image */
+  max-width: 40%; /* Ensures image is responsive and doesn't overflow */
+  height: auto; /* Maintain aspect ratio */
 }
 
 .text-block {
@@ -84,7 +184,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Center the content vertically */
-  margin-right: 9rem; /* Adjust the right margin as needed */
+  margin-right: 6rem; /* Adjust the right margin as needed */
   background-color: #fff;
 }
 
@@ -94,7 +194,7 @@ body {
   color: #154245; /* Example color, adjust as needed */
   text-align: left;
   line-height: 1; /* Adjust this value as needed */
-  margin-left: 13rem;
+  margin-left: 33%;
   margin-top: 1rem;
   margin-bottom: 0.5rem; /* Spacing between the title and the headline */
   font-weight: bold; /* Optional: if you want the title to be bold */
@@ -111,7 +211,7 @@ body {
   color: #666; 
   line-height: 1.6; 
   text-align: left; 
-  margin-left: 13rem;
+  margin-left: 33%;
   margin-bottom: 0rem; 
   font-style: normal; 
 } 
@@ -127,7 +227,7 @@ body {
   font-weight: normal; 
 } */
 
-/* If you have a .cta-button inside .text-block and want to customize it as well */
+	/* If you have a .cta-button inside .text-block and want to customize it as well */
 .text-block .cta-button {
   background-color: #f4797d; /* Custom button color */
   color: #fff; /* Text color for the button */
@@ -138,7 +238,7 @@ body {
   display: inline-block; /* Allows setting padding and margins */
   margin-top: 1rem; /* Space above the button */
   width: 22%; /* Adjust the width to your preference */
-  margin-left: 13rem; /* Add space between the headline text and the button */
+  margin-left: 33%; /*pace between the headline text and the button */
   font-size: 1.2rem;
   font-weight: bold; /* Bold text */
   text-align: center; /* Center text */
@@ -149,7 +249,7 @@ body {
   background-color: #ec1f27; /* Different color when hovered over */
 }
 
-/* Container for the image and stat cards */
+	/* Container for the image and stat cards */
 .image-stats-container {
   position: relative; /* This allows absolute positioning relative to this container */
   flex: 1; /* Ensures it takes up the appropriate space in the flex container */
@@ -165,7 +265,7 @@ body {
   height: auto; /* Height is auto to maintain aspect ratio */
 }
 
-/* Statistic cards overlay */
+	/* Statistic cards overlay */
 .stats-overlay {
   position: absolute;
   top: 70px; /* Adjust this value to position the stat cards as desired */
@@ -197,15 +297,15 @@ body {
   margin-top: 0.75rem; /* Reduce top margin to bring closer to the heading */
 }
 
-/* Cards Section styles */
+	/* Cards Section styles */
 .cards-section {
   display: flex;
   justify-content: space-around; /* This will space the cards evenly */
   background-color: #f6f6ef; /* Grey background */
-  padding: 2rem 0; /* Padding above and below the cards */
+  padding: 1rem 0; /* Padding above and below the cards */
 }
 
-/* Use a pseudo-element to handle the horizontal padding */
+	/* Use a pseudo-element to handle the horizontal padding */
 .cards-section::before,
 .cards-section::after {
   content: "";
@@ -255,6 +355,190 @@ body {
   transition: background-color 0.3s; /* Smooth transition for background color */
 }
 
+.resources-container {
+  max-width: 1000px; /* Maximum width of the container */
+  margin: auto; /* Center the container */
+  margin-top: 7%;
+  background-color: #f6f6ef; /* Background color for the container */
+  padding: 20px; /* Padding inside the container */
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.5);
+}
+
+
+.full-width-image-section-resources {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Ensures no overflow from the image */
+}
+
+.full-width-image-section-resources img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  object-position: bottom; /* Center the image within the container */
+  display: block; /* Removes bottom space/margin */
+  vertical-align: middle; /* Aligns the image vertically */
+}
+
+.full-width-image-section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Ensures no overflow from the image */
+}
+
+.full-width-image-section img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover; /* Cover the container while maintaining aspect ratio */
+  object-position: center; /* Center the image within the container */
+  display: block; /* Removes bottom space/margin */
+  vertical-align: middle; /* Aligns the image vertically */
+}
+  
+.overlay-text-boxes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 17%;
+  margin-bottom: 1%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  line-height: 1px;
+  align-items: flex-start;
+}
+
+.text-box {
+  border-radius: 2px; /* Optional: rounded corners for the text boxes */
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+	/* If you want to style the text boxes differently */
+#text-box-1 {
+  font-size: 2.3rem; /* Adjust size as needed */
+  color: #fff; 
+  font-weight: bold;
+  width: auto;
+  background-color: #154245;
+}
+
+#text-box-2 {
+  font-size: 1.7rem; /* Adjust size as needed */
+  color: #154245; /* Keep existing color or change as needed */
+  width: auto;
+  flex-wrap: wrap;
+  background-color: #e8ad68;
+}
+
+
+/* Services page, Homebase section */
+
+/* .info-section-title {
+    font-family: 'Tahoma', sans-serif;
+    text-align: left; /* Center the title text * /
+    background-color: #fff; /* Set a background color if needed * /
+    margin-top: 3%;
+    margin-left: 17%;
+    margin-bottom: 2%; /* Space below the title section * /
+} */
+
+.info-section-resources {
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  align-items: center;
+}
+
+#news {
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.info-section {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-bottom: 7%; /* Space between sections */
+}
+
+.info-image-resources img {
+    width: 100%;
+    height: auto;
+    max-width: 800px; /* Adjust the max-width as needed */
+    border-radius: 8px;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Adjust the max-width as needed */
+    border-radius: 8px;
+}
+
+.info-content {
+    font-family: 'Tahoma', sans-serif;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin-left: 100px;
+}
+
+.info-content-resources {
+    font-family: 'Tahoma', sans-serif;
+    max-width: 500px; /* Adjust the max-width as needed */
+    margin-left: 100px;
+}
+
+.info-section-resources h2 {
+    font-family: 'Tahoma', sans-serif;
+    max-width: 500px; /* Adjust the max-width as needed */
+    color: #154245;
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 16px;
+}
+
+.info-section h2 {
+    color: #154245;
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-bottom: 16px;
+}
+
+.info-section p {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the font color as needed */
+    margin-bottom: 16px;
+}
+
+.info-section-resources p {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the font color as needed */
+    margin-bottom: 16px;
+}
+
+.info-section ul {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #333; /* Adjust the font color as needed */
+    margin-bottom: 3%;
+}
+
+.info-links a {
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #2f939a; /* Adjust the link color as needed */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px; /* Space between links */
+}
+
+.info-links a {
+    display: inline-block; /* To apply margin-right correctly */
+}
+
+.info-links:hover a {
+    color: #154245;
+}
+
 /* Footer styles */
 .footer {
   text-align: center;
@@ -263,6 +547,8 @@ body {
   color: #154245;
 }
 
+
+
 /* Responsive behavior */
 @media (max-width: 768px) {
   .header,
@@ -270,6 +556,52 @@ body {
     flex-direction: column;
   }
 
+  .hamburger-menu {
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    padding: 5px;
+    display: flex; /* Show hamburger icon */
+    z-index: 1000;
+  }
+
+  .navbar .navbar-links {
+    display: none; /* Hide navbar links */
+    padding: 5px;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Position below the navbar */
+    left: 55%;
+    right: auto;
+    width: auto;
+    border-radius: 12px;
+    align-items: flex-start;
+    background-color: #fff;
+  }
+
+  /* Style navbar links as a vertical menu */
+  .navbar .navbar-links a {
+    padding: 5px;
+    background: transparent;
+    text-align: center;
+  }
+  
+  .navbar .nav-item .submenu {
+    position: relative; /* Changed from absolute to relative */
+    width: 100%; /* Submenu should match the width of navbar-links */
+    background-color: #f6f6ef;
+    box-shadow: none; /* Optional: remove the shadow if it's not needed */
+    /* Add these lines to ensure the submenu is part of the normal document flow */
+    display: none; /* Keep submenu hidden initially */
+  }
+  
+  .navbar .logo-image {
+    margin-left: -100%;
+    margin-top: -100%;
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
+  }
+  
   .body-section {
     flex-direction: column;
   }
@@ -281,6 +613,7 @@ body {
   }
 
   .stats-card {
+    display: none;
     width: 150px;
   }
   
@@ -293,6 +626,10 @@ body {
     flex-direction: column; /* Stack image and stats on small screens */
   }
   
+  .text-block .cta-button {
+    width: 100px;
+  }
+  
   .cards-section {
     flex-direction: column; /* Stack cards vertically on smaller screens */
     align-items: center; /* Align cards in the center */
@@ -301,5 +638,32 @@ body {
   .card {
     width: 80%; /* Wider cards for small screens */
     margin-bottom: 1rem; /* Space between stacked cards */
+  }
+  
+  .profile-content {
+    max-width: 100%; /* Limit the width of the text block */
+    margin-left: 5%;
+  }
+  
+  /*
+  .container {
+    flex-direction: column; /* Stack columns on smaller screens 
+    max-width: 100%;
+    margin: 10%;
+  } */
+
+  .info-section {
+        flex-direction: column;
+        margin-right: 7%;
+  }
+
+  .info-image {
+        width: 100%;
+        margin-bottom: 20px;
+  }
+
+  .info-content {
+        width: 100%;
+        margin-left: 0; 
   }
 }
